@@ -42,6 +42,6 @@ void Triangle::showPerimeter() const {
     double Pe;
     s3 = sqrt((s1 * s1)+(s2*s2));
     Pe = s1 + s2 + s3;
-    cout << "perimeter of the = " << Pe << endl;
+    cout << "Perimeter of the triangle = " << Pe << endl;
 
 }
