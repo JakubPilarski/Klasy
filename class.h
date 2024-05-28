@@ -15,8 +15,6 @@ public:
     Triangle();
     Triangle(const std::string& name, double x = 0, double y = 0);
     ~Triangle();
-    void setName(const std::string& name);
-    void sides (double x, double y);
     void showSides() const;
     void showArea() const;
     void showPerimeter() const;
@@ -34,4 +32,20 @@ public:
     void showAreaRe() const;
     void showPerimeterRe() const;
 };
+class Circle{
+private:
+    std::string m_name;
+    double r;
+public:
+    Circle();
+    Circle(const std::string& name, double x = 0);
+    ~Circle();
+    void showCircle() const;
+    void showAreaCi() const;
+    void showPerimeterCi() const;
+};
+void triangle (double *x,double *y);
+void rectangle (double *x,double *y);
+void circle (double *x);
+
 #endif //UNTITLED19_CLASS_H

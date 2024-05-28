@@ -17,15 +17,6 @@ Triangle::~Triangle(){
 
 }
 
-void Triangle::setName(const std::string &name) {
-    m_name = name;
-}
-
-void Triangle::sides(double x, double y) {
-    s1 = x;
-    s2 = y;
-}
-
 void Triangle::showSides() const {
     double s3;
     s3 = sqrt((s1 * s1)+(s2*s2));
@@ -73,5 +64,56 @@ void Rectangle::showSidesRe() const {
 }
 Rectangle::~Rectangle() {
 
+}
+Circle::Circle() {
+    m_name = "???";
+    r = 0;
+}
+Circle::Circle(const std::string &name, double x) {
+    m_name = name;
+    r = x;
+}
+Circle::~Circle() {
+
+}
+
+void Circle::showCircle() const {
+    cout<<"radius of the circle = "<< r << endl;
+}
+
+void Circle::showPerimeterCi() const {
+    double l;
+    l = 2*3.14*r;
+    cout << "Perimeter of the Circle = " << l << endl;
+}
+
+void Circle::showAreaCi() const {
+    double p;
+    p = 3.14*r;
+    cout << "Area of the rectangle = " << p << endl;
+}
+void triangle (double *x,double *y){
+    cout << "Triangle" << endl;
+    cout << "First adjoining of your triangle =  ";
+    cin >> * x;
+    cout << endl;
+    cout << "Second adjoining of your triangle =  ";
+    cin >> * y;
+    cout << endl;
+}
+void rectangle (double *x,double *y){
+    cout << "Rectangle" << endl;
+    cout << "First side of your rectangle =  ";
+    cin >> * x;
+    cout << endl;
+    cout << "Second side of your rectangle =  ";
+    cin >> * y;
+    cout << endl;
+}
+void circle (double *x){
+    cout << "Circle" << endl;
+    cout<< "Radius of your circle = ";
+    cin >> * x;
+    cout << endl;
 }
 
