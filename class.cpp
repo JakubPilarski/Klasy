@@ -65,6 +65,7 @@ void Rectangle::showSidesRe() const {
 Rectangle::~Rectangle() {
 
 }
+
 Circle::Circle() {
     m_name = "???";
     r = 0;
