@@ -20,6 +20,18 @@ public:
     void showSides() const;
     void showArea() const;
     void showPerimeter() const;
-
+};
+class Rectangle {
+private:
+    std::string m_name;
+    double s1;
+    double s2;
+public:
+    Rectangle();
+    Rectangle(const std::string& name, double x = 0, double y = 0);
+    ~Rectangle();
+    void showSidesRe() const;
+    void showAreaRe() const;
+    void showPerimeterRe() const;
 };
 #endif //UNTITLED19_CLASS_H

@@ -45,3 +45,33 @@ void Triangle::showPerimeter() const {
     cout << "Perimeter of the triangle = " << Pe << endl;
 
 }
+Rectangle:: Rectangle(){
+    m_name = "???";
+    s1 = 0;
+    s2 = 0;
+}
+Rectangle::Rectangle(const std::string &name, double x, double y) {
+    m_name = name;
+    s1 = x;
+    s2 = y;
+}
+
+void Rectangle::showAreaRe() const {
+    double p;
+    p = s1*s2;
+    cout << "Area of the rectangle = " << p << endl;
+}
+
+void Rectangle::showPerimeterRe() const {
+    double Pe;
+    Pe = 2*s1+2*s2;
+    cout << "Perimeter of the Rectangle = " << Pe << endl;
+}
+
+void Rectangle::showSidesRe() const {
+    cout<<"First side of the rectangle = " << s1 << " Second side of the rectangle = " << s2 << endl;
+}
+Rectangle::~Rectangle() {
+
+}
+
