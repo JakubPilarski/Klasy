@@ -18,8 +18,8 @@ public:
     Triangle(const std::string& name, double x = 0, double y = 0);
     ~Triangle();
     void showSides() const;
-    void showArea() const;
-    void showPerimeter() const;
+    double area() const;
+    double perimeter() const;
     void name() const;
     const Triangle& bigger(const Triangle& p) const;
 };
@@ -35,8 +35,8 @@ public:
     Rectangle(const std::string& name, double x = 0, double y = 0);
     ~Rectangle();
     void showSides() const;
-    void showArea() const;
-    void showPerimeter() const;
+    double area() const;
+    double perimeter() const;
     void name() const;
     const Rectangle& bigger(const Rectangle& t) const;
 };
@@ -51,8 +51,8 @@ public:
     Circle(const std::string& name, double x = 0);
     ~Circle();
     void showCircle() const;
-    void showAreaCi() const;
-    void showPerimeterCi() const;
+    double area() const;
+    double perimeter() const;
     void name() const;
     const Circle&  bigger(const Circle& t) const;
 };
