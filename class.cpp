@@ -26,18 +26,18 @@ void Triangle::showSides() const {
     s3 = sqrt((s1 * s1)+(s2*s2));
             cout << "First adjoining = " << s1 << " Second adjoining = " << s2 << " hypotenuse = "<< s3 << endl;
 }
-void Triangle::showArea() const {
+double Triangle::area() const {
     double p;
    p = (s1*s2)/2;
-   cout << "Area of the triangle = " << p << endl;
+   return p;
 
 }
-void Triangle::showPerimeter() const {
+double Triangle::perimeter() const {
     double s3;
     double Pe;
     s3 = sqrt((s1 * s1)+(s2*s2));
     Pe = s1 + s2 + s3;
-    cout << "Perimeter of the triangle = " << Pe << endl;
+    return Pe;
 
 }
 int Triangle::numberFigury() {
@@ -45,10 +45,11 @@ int Triangle::numberFigury() {
 }
 void Triangle::name() const {
     cout<<m_name<<endl;
+
 }
 const Triangle& Triangle:: bigger(const Triangle& t) const {
-double d =(s1*s2)/2;
-double dp = (t.s1*t.s2)/2;
+double d = area();
+double dp = t.area();
     if (d > dp){
         return *this;}
     return t;
@@ -68,16 +69,17 @@ int Rectangle::numberFigury() {
     return m_numberFigury;
 }
 
-void Rectangle::showArea() const {
+double Rectangle::area() const {
     double p;
     p = s1*s2;
-    cout << "Area of the rectangle = " << p << endl;
+
+    return p;
 }
 
-void Rectangle::showPerimeter() const {
+double Rectangle::perimeter() const {
     double Pe;
     Pe = 2*s1+2*s2;
-    cout << "Perimeter of the Rectangle = " << Pe << endl;
+    return  Pe;
 }
 
 void Rectangle::showSides() const {
@@ -90,8 +92,8 @@ void Rectangle::name() const {
     cout<<m_name<<endl;
 }
 const Rectangle& Rectangle:: bigger(const Rectangle& t) const {
-    double d =s1*s2;
-    double dp = t.s1*t.s2;
+    double d =area();
+    double dp = t.area();
     if (d > dp){
         return *this;}
     return t;
@@ -116,28 +118,28 @@ void Circle::showCircle() const {
     cout<<"radius of the circle = "<< r << endl;
 }
 
-void Circle::showPerimeterCi() const {
+double Circle::perimeter() const {
     double l;
     l = 2*3.14*r;
-    cout << "Perimeter of the Circle = " << l << endl;
+    return l;
 }
 
-void Circle::showAreaCi() const {
+double Circle::area() const {
     double p;
-    p = 3.14*r;
-    cout << "Area of the rectangle = " << p << endl;
+    p = 3.14*r*r;
+    return p;
 }
 void Circle::name() const {
     cout<<m_name<<endl;
 }
 const Circle& Circle:: bigger(const Circle& t) const {
-    double d =3.14*r;
-    double dp = 3.14*t.r;
+    double d =area();
+    double dp = t.area();
     if (d > dp){
         return *this;}
     return t;
 }
-void triangle (double *x,double *y){
+void triangle (double *x,double *y ){
     cout << "Triangle" << endl;
     cout << "First adjoining of your triangle =  ";
     cin >> * x;
