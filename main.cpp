@@ -1,6 +1,36 @@
 #include <iostream>
-#include "class.h"
+#include "Triangle.h"
+#include "Rectangle.h"
+#include "Circle.h"
 using namespace std;
+void triangle (double *x,double *y ){
+    cout << "Triangle" << endl;
+    cout << "First adjoining of your triangle =  ";
+    cin >> * x;
+    cout << endl;
+    cout << "Second adjoining of your triangle =  ";
+    cin >> * y;
+    cout << endl;
+}
+void rectangle (double *x,double *y){
+    cout << "Rectangle" << endl;
+    cout << "First side of your rectangle =  ";
+    cin >> * x;
+    cout << endl;
+    cout << "Second side of your rectangle =  ";
+    cin >> * y;
+    cout << endl;
+}
+void circle (double *x){
+    cout << "Circle" << endl;
+    cout<< "Radius of your circle = ";
+    cin >> * x;
+    cout << endl;
+}
+void name(char *text){
+    cout<<"Enter Name : "<< endl;
+    cin>>text;
+}
 void menu(){
     cout<<" 1 - Triangle"<< endl;
     cout<<" 2 - Rectangle "<< endl;
