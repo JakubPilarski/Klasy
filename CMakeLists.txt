@@ -4,5 +4,9 @@ project(untitled19)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(untitled19 main.cpp
-        class.cpp
-        class.h)
+        Triangle.cpp
+        Triangle.h
+        Rectangle.h
+        Circle.h
+        Rectangle.cpp
+        Circle.cpp)
